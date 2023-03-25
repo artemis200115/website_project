@@ -1,6 +1,10 @@
 from flask import Flask, render_template, jsonify
 from database import load_jobs_from_db
 
+
+IMAGES =[ {
+'link': 'https://websiteproject.tacogguk.repl.co/static/penicillin.png'
+}]
 app = Flask(__name__)
 
 
@@ -8,7 +12,7 @@ app = Flask(__name__)
 def hello_jovian():
     jobs = load_jobs_from_db()
     return render_template('home.html', 
-                           jobs= jobs)
+                           jobs= jobs, img=IMAGES)
 
 
 if __name__ == '__main__':
