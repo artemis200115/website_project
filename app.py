@@ -15,6 +15,21 @@ IMAGES =[ {
 
 'id':3,
 'link': 'https://websiteproject.tacogguk.repl.co/static/morphine.png'
+}, 
+        {
+
+'id':4,
+'link': 'https://websiteproject.tacogguk.repl.co/static/octanitrocubane.png'
+}, 
+        {
+
+'id':5,
+'link': 'https://websiteproject.tacogguk.repl.co/static/bullvalene.png'
+}, 
+         {
+
+'id':6,
+'link': 'https://websiteproject.tacogguk.repl.co/static/indigo.png'
 }]
 
 app = Flask(__name__)
