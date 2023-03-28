@@ -49,7 +49,7 @@ def show_job(id):
     return "Not Found", 404
   
   return render_template('moleculeinfo.html', 
-                         job=job)
+                         job=job, img = IMAGES)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
