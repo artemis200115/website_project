@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   </head>
-  <body>
+  <body style="background-color: #d099e2;">
     {% include "nav_diff.html" %}
 <br>
     <br>
@@ -18,10 +18,10 @@
     <div class="col" >
 {% for image in img %}
     {% if job['id'] == image['id'] %}
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem; border: 2px solid black; background-color: #f2a5e8">
   <img class="card-img-top" src="{{image['link']}}" alt="Card image cap">
   <div class="card-body">
-    <p class="card-text" style="text-align center; font-weight: bold;">{{job['title']}}</p>
+    <p class="card-text" style="text-align: center; font-weight: bold;">{{job['title']}}</p>
   </div>
 </div>
     {% endif %}
@@ -30,17 +30,31 @@
   </div>
 
     
-    <div class="col" >
-      
+    <div class="col" style="background-color: #e8bffb; border: 2px solid black;" >
+      <br>
       <ul>
         <li><b>Name:</b> {{job['title']}}</li>
+        <br>
         <li><b>Functional Groups: </b>
  {{job['functional_groups']}}</li>
+        <br>
         <li><b>Family:</b> {{job['family']}}</li>
-        <li><b>Description:</b>{{job['descr']}}</li>
+        <br>
+        <li><b>Description:</b> {{job['descr']}}</li>
+        <br>
       </ul>
     </div>
   </div>
+  <br>
+      <br>
+      <br>
 </div>
+    
+    <div style="background-color: #f2a5e8; border-top: 2px solid black; border-bottom: 2px solid black;">
+      <br>
+      <br>
+      <p style="font-weight: bold; text-align: center;">Contact Me</p>
+    {% include 'footer.html' %}
+    </div>
   </body>
 </html>
