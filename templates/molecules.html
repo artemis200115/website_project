@@ -1,15 +1,15 @@
 <div class="container" >
       <div class="row">
-{% for job in jobs %}
+{% for molecule in molecules %}
 {% for image in img %}
-{% if job['id'] == image['id'] %}        
+{% if molecule['id'] == image['id'] %}        
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm" style="background-color: #ccdcfd; border: 2px solid black;">            
             <svg class="bd-placeholder-img card-img-top" width="200" height="30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
               <img src="{{image['link']}}" style="margin: 0 auto; height: 220px; max-width: 100%; width: auto; overflow: hidden"></img></svg>
             <div class="card-body">
-              <p style="text-align:center; font-weight: bold;" class="card-text">{{job['title']}}</p>      
-                  <a href="/job/{{job['id']}}"><button type="button" class="btn btn-info btn-sm btn-block col-12" style="background-color: #bbbefe !important; border: 2px solid black !important;">View More</button></a>               
+              <p style="text-align:center; font-weight: bold;" class="card-text">{{molecule['title']}}</p>      
+                  <a href="/molecule/{{molecule['id']}}"><button type="button" class="btn btn-info btn-sm btn-block col-12" style="background-color: #bbbefe !important; border: 2px solid black !important;">View More</button></a>               
               
             </div>
           </div>

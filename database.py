@@ -9,7 +9,7 @@ engine = create_engine(dbconnection, connect_args={
             
         }})
 
-def load_jobs_from_db():
+def load_molecules():
   with engine.connect() as conn:
     result = conn.execute(text("select * from molecules"))
     results_as_dict = result.mappings().all()
@@ -18,7 +18,7 @@ def load_jobs_from_db():
       jobs.append(row)
     return jobs
 
-def load_job_from_db(id):
+def load_molecule(id):
   with engine.connect() as conn:
     result = conn.execute(
       text(f"select * FROM molecules WHERE id = {id}")
