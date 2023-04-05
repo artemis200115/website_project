@@ -33,6 +33,10 @@ IMAGES =[ {
 
 'id':6,
 'link': 'https://websiteproject.tacogguk.repl.co/static/indigo.png'
+}, {
+
+'id':7,
+'link': 'https://websiteproject.tacogguk.repl.co/static/geraniol.png'
 }]
 
 app = Flask(__name__)
