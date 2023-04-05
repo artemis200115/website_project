@@ -43,13 +43,13 @@ def load_webpage():
 
 @app.route("/molecule/<id>")
 def show_molecule(id):
-  job = load_molecule(id)
+  molecule = load_molecule(id)
   
-  if not job:
+  if not molecule:
     return "Not Found", 404
   
   return render_template('moleculeinfo.html', 
-                         job=job, img = IMAGES)
+                         molecule=molecule, img = IMAGES)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)

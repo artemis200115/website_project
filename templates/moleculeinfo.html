@@ -17,11 +17,11 @@
   <div class="row" >
     <div class="col" >
 {% for image in img %}
-    {% if job['id'] == image['id'] %}
+    {% if molecule['id'] == image['id'] %}
             <div class="card" style="width: 18rem; border: 2px solid black; background-color: #f2a5e8">
   <img class="card-img-top" src="{{image['link']}}" alt="Card image cap">
   <div class="card-body">
-    <p class="card-text" style="text-align: center; font-weight: bold;">{{job['title']}}</p>
+    <p class="card-text" style="text-align: center; font-weight: bold;">{{molecule['title']}}</p>
   </div>
 </div>
     {% endif %}
@@ -33,14 +33,14 @@
     <div class="col" style="background-color: #e8bffb; border: 2px solid black;" >
       <br>
       <ul>
-        <li><b>Name:</b> {{job['title']}}</li>
+        <li><b>Name:</b> {{molecule['title']}}</li>
         <br>
         <li><b>Functional Groups: </b>
- {{job['functional_groups']}}</li>
+ {{molecule['functional_groups']}}</li>
         <br>
-        <li><b>Family:</b> {{job['family']}}</li>
+        <li><b>Family:</b> {{molecule['family']}}</li>
         <br>
-        <li><b>Description:</b> {{job['descr']}}</li>
+        <li><b>Description:</b> {{molecule['descr']}}</li>
         <br>
       </ul>
     </div>
