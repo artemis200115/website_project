@@ -1,6 +1,9 @@
+#imports 
+
 from flask import Flask, render_template, jsonify
 from database import load_molecules, load_molecule
 
+#image database stored locally
 
 IMAGES =[ {
 
@@ -35,11 +38,16 @@ IMAGES =[ {
 app = Flask(__name__)
 
 
+#loading molecule info on home page of website 
+#molecule website stored in mysql database
+
 @app.route("/")
 def load_webpage():
     molecules = load_molecules()
     return render_template('home.html', 
                           molecules= molecules, img=IMAGES)
+
+#loading molecule info on individual pages of website
 
 @app.route("/molecule/<id>")
 def show_molecule(id):

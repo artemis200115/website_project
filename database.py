@@ -1,3 +1,5 @@
+#imports
+
 from sqlalchemy import create_engine,text
 import os
 
@@ -8,6 +10,8 @@ engine = create_engine(dbconnection, connect_args={
             "ssl_ca": "/etc/ssl/cert.pem"
             
         }})
+
+#loading molecule information from mysql database
 
 def load_molecules():
   with engine.connect() as conn:
